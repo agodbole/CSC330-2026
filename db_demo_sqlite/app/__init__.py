@@ -19,6 +19,8 @@ DB_CONFIG_STR = 'sqlite:///' + os.path.join(basedir, DB_NAME)
 app.config['SQLALCHEMY_DATABASE_URI'] = DB_CONFIG_STR
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"]= True
 
+print(f"Database URI: {app.config['SQLALCHEMY_DATABASE_URI']}")
+
 # Create database connection and associate it with the Flask application
 db = SQLAlchemy(app)
 
